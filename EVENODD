@@ -1,0 +1,101 @@
+package vaishnavi_is183;
+import java.util.*;
+class Prog {
+	public void Arrays()
+	{
+		int arr[] = new int[15];
+		Scanner ob1 = new Scanner(System.in);
+		System.out.println("Enter elements of the array:");
+		for (int i=0; i<15; i++)
+		{
+			arr[i] = ob1.nextInt();
+		}
+		int even[] = new int[10];
+		int odd[] = new int[10];
+		int evencount = 0, oddcount = 0;
+		int j=0, k=0;
+		for (int i=0; i<arr.length; i++)
+		{
+			if (arr[i]%2==0)
+			{
+				even[j] = arr[i];
+				j++;
+				evencount++;
+			}
+			else
+			{
+				odd[k] = arr[i];
+				k++;
+				oddcount++;
+			}
+		}
+		System.out.println("Even array:");
+		for (int i=0; i<evencount; i++)
+		{
+			System.out.print(even[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Odd array:");
+		for (int i=0; i<oddcount; i++)
+		{
+			System.out.print(odd[i] + " ");
+		}
+		System.out.println();
+	}
+}
+public class Evenodd extends Prog {
+	public void Arrays()
+	{
+		super.Arrays();
+		int rows,cols;
+		Scanner ob2 = new Scanner(System.in);
+		System.out.println("Enter number of rows:");
+		rows = ob2.nextInt();
+		System.out.println("Enter number of columns:");
+		cols = ob2.nextInt();
+		int arr2[][] = new int[rows][cols];
+		System.out.println("Enter matrix elements:");
+		for (int i=0;i<rows;i++)
+		{
+			for (int j=0;j<cols;j++)
+			{
+				arr2[i][j] = ob2.nextInt();
+			}
+		}
+		int trans[][] = new int[cols][rows];
+		for (int i=0; i<rows; i++)
+		{
+			for (int j=0; j<cols; j++)
+			{
+				trans[j][i] = arr2[i][j];
+			}
+		}
+		System.out.println("Transpose:");
+		for (int i=0; i<rows; i++)
+		{
+			for (int j=0; j<cols; j++)
+			{
+				System.out.print(trans[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		Evenodd x = new Evenodd();
+		x.Arrays();
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
