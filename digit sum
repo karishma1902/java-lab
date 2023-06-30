@@ -1,0 +1,30 @@
+import java.util.*;
+public class Digitsum {
+	public void sum(int n)
+	{
+		int dsum=0;
+		for (int i=0; i<2; i++)
+		{
+			dsum+=(n%10);
+			n/=10;
+		}
+		if (dsum<10)
+		{
+			System.out.println("Digit Sum: " + dsum);
+		}
+		else
+		{
+			sum(dsum);
+		}
+	}
+	public static void main(String[] args) {
+		int n;
+		Scanner ob = new Scanner(System.in);
+		Digitsum x = new Digitsum();
+		System.out.println("Enter a two-digit number:");
+		n = ob.nextInt();
+		x.sum(n);
+
+	}
+
+}
