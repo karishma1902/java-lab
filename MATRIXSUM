@@ -1,0 +1,52 @@
+import java.util.*;
+public class matrixsum {
+
+	public static void main(String[] args) {
+		int rows = 2, cols = 3, i, j;
+		int a[][] = new int[rows][cols];
+		int b[][] = new int[rows][cols];
+		Scanner ob1 = new Scanner(System.in);
+		System.out.println("Enter elements of first matrix:");
+		for (i=0; i<rows; i++)
+		{
+			for (j=0; j<cols; j++)
+			{
+				a[i][j] = ob1.nextInt();
+			}
+		}
+		System.out.println("Enter elements of second matrix:");
+		for (i=0; i<rows; i++)
+		{
+			for (j=0; j<cols; j++)
+			{
+				b[i][j] = ob1.nextInt();
+			}
+		}
+		matrixsum obj = new matrixsum();
+		obj.matsum(a,b);
+		
+	}
+	public void matsum(int a[][], int b[][])
+	{
+		int rows = 2, cols = 3, i, j;
+		int res[][] = new int[rows][cols];
+		for (i=0; i<rows; i++)
+		{
+			for (j=0; j<cols; j++)
+			{
+				res[i][j] = a[i][j] + b[i][j];
+			}
+		}
+		System.out.print("Elements are:");
+		for (i=0; i<rows; i++)
+		{
+			for (j=0; j<cols; j++)
+			{
+				System.out.print(res[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+	}
+}
+
